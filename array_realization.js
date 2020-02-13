@@ -9,9 +9,10 @@ const marks = [4, 5, 5, 3, 4, 5];
   console.log(couples);
 
  //function 2
- let pairsAndProject = [];
+ const pairsAndProject = nestedArray (couples, themes);
+ 
   function nestedArray (couples, themes) {
-   
+    let pairsAndProject = [];
     for(let i = 0; i<couples.length; i++){
         pairsAndProject.push([couples[i].join(' and '), themes[i]]);
     }
@@ -38,7 +39,7 @@ function randomMarker(pairsAndProject){
    let randomResultMark=[];
    for(let i=0; i<pairsAndProject.length; i++){
 
-    let Mark = Math.floor(Math.random()*(max - min +1) + min);
+    const Mark = Math.floor(Math.random()*(max - min +1) + min);
     
     randomResultMark.push ([...pairsAndProject[i], Mark]);
     }
